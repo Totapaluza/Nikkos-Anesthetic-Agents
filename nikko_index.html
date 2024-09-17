@@ -1,0 +1,71 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikko's Memory Game: Anesthesia Agents</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Nikko's Memory Game: Anesthesia Agents</h1>
+
+<table id="anesthesiaTable">
+    <tr>
+        <th>Agent</th>
+        <th>B:G</th>
+        <th>O:G</th>
+        <th>F:B</th>
+        <th>VP (mmHg @ 20°C)</th>
+        <th>MAC (%)</th>
+    </tr>
+    <tr>
+        <td data-answer="Nitrous Oxide">Nitrous Oxide</td>
+        <td data-answer="0.47">0.47</td>
+        <td data-answer="1.4">1.4</td>
+        <td data-answer="2.3">2.3</td>
+        <td data-answer="38770">38770</td>
+        <td data-answer="104">104</td>
+    </tr>
+    <tr>
+        <td data-answer="Desflurane">Desflurane</td>
+        <td data-answer="0.45">0.45</td>
+        <td data-answer="19">19</td>
+        <td data-answer="27.2">27.2</td>
+        <td data-answer="669">669</td>
+        <td data-answer="6.6">6.6</td>
+    </tr>
+    <tr>
+        <td data-answer="Sevoflurane">Sevoflurane</td>
+        <td data-answer="0.65">0.65</td>
+        <td data-answer="47">47</td>
+        <td data-answer="47.5">47.5</td>
+        <td data-answer="157">157</td>
+        <td data-answer="2">2</td>
+    </tr>
+    <tr>
+        <td data-answer="Isoflurane">Isoflurane</td>
+        <td data-answer="1.46">1.46</td>
+        <td data-answer="91">91</td>
+        <td data-answer="46">46</td>
+        <td data-answer="238">238</td>
+        <td data-answer="1.1">1.1</td>
+    </tr>
+    <tr>
+        <td data-answer="Halothane">Halothane</td>
+        <td data-answer="2.54">2.54</td>
+        <td data-answer="224">224</td>
+        <td data-answer="51.1">51.1</td>
+        <td data-answer="243">243</td>
+        <td data-answer="0.75">0.75</td>
+    </tr>
+</table>
+
+<!-- Buttons for shuffling, checking answers, and resetting -->
+<button id="shuffleButton" onclick="shuffleBlanks()">Shuffle Blanks</button>
+<button id="checkButton" onclick="checkAnswers()" disabled>Check Answers</button>
+<button id="resetButton" onclick="resetGame()" disabled>Reset Game</button>
+
+<script src="script.js"></script>
+</body>
+</html>

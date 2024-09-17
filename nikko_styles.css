@@ -1,0 +1,26 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: #f0f0f0;
+}
+
+.correct {
+    background-color: #c8e6c9; /* Green for correct answers */
+}
+
+.incorrect {
+    background-color: #ffcdd2; /* Red for incorrect answers */
+}
