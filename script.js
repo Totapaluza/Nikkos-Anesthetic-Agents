@@ -90,15 +90,15 @@ function testYourself() {
 function checkAnswers() {
     document.querySelectorAll("td input").forEach(input => {
         let cell = input.parentElement;
-        let userAnswer = input.value;
-        let correctAnswer = cell.getAttribute("data-answer");
+        let userAnswer = input.value.toLowerCase();  // Convert user's answer to lowercase
+        let correctAnswer = cell.getAttribute("data-answer").toLowerCase();  // Convert correct answer to lowercase
 
-        if (userAnswer === correctAnswer) {
-            cell.innerHTML = correctAnswer;
+        if (userAnswer === correctAnswer) {  // Compare case-insensitively
+            cell.innerHTML = correctAnswer;  // Display correct answer
             cell.classList.add("correct");
             revealedAnswers.add(cell); // Mark as revealed
         } else {
-            cell.innerHTML = `<input type="text" value="${userAnswer}" class="incorrect">`;
+            cell.innerHTML = `<input type="text" value="${input.value}" class="incorrect">`;  // Show incorrect answer
             cell.classList.add("incorrect");
         }
     });
