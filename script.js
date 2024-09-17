@@ -86,15 +86,15 @@ function testYourself() {
     testYourselfButton.disabled = true;
 }
 
-// Check Answers: Validate all player inputs
+// Check Answers: Validate all player inputs (case-insensitive comparison)
 function checkAnswers() {
     document.querySelectorAll("td input").forEach(input => {
         let cell = input.parentElement;
-        let userAnswer = input.value.toLowerCase();  // Convert user's answer to lowercase
-        let correctAnswer = cell.getAttribute("data-answer").toLowerCase();  // Convert correct answer to lowercase
+        let userAnswer = input.value.trim().toLowerCase();  // Convert user's answer to lowercase and trim spaces
+        let correctAnswer = cell.getAttribute("data-answer").trim().toLowerCase();  // Convert correct answer to lowercase
 
         if (userAnswer === correctAnswer) {  // Compare case-insensitively
-            cell.innerHTML = correctAnswer;  // Display correct answer
+            cell.innerHTML = cell.getAttribute("data-answer");  // Display correct answer with original case
             cell.classList.add("correct");
             revealedAnswers.add(cell); // Mark as revealed
         } else {
