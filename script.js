@@ -1,4 +1,3 @@
-
 let checkButton = document.getElementById("checkButton");
 let shuffleButton = document.getElementById("shuffleButton");
 let resetButton = document.getElementById("resetButton");
